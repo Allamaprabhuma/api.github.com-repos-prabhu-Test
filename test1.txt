@@ -1,0 +1,11 @@
+#!/bin/bash
+mkdir /var/lib/waagent/aaa && mkdir /var/lib/waagent/bbb && mkdir /var/lib/waagent/ccc && mkdir /var/lib/waagent/ddd;
+echo 'testtesttest' > /var/lib/testscript.txt;
+echo 'testtesttest' > /var/lib/waagent/aaa/testscript.txt;
+mv /var/lib/waagent/aaa/ /var/lib/waagent/bbb/;
+cp -avr /var/lib/waagent/bbb/ /var/lib/waagent/ccc/;
+rm -rf /var/lib/waagent/bbb/;
+chmod 666 /var/lib/waagent/ddd;
+date -s "1 JAN 2016";
+useradd "vongsa";
+wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.i686.rpm -P /var/lib/waagent/ddd/;
